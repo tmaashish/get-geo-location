@@ -1,0 +1,26 @@
+//get geo location in from js we can found geo location in console here is examples
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geolocation Example</title>
+  <script>
+    const getLocation=()=>{
+        if('geolocation' in navigator){
+            navigator.geolocation.getCurrentPosition(success,error)
+        }
+    }
+    function success(position){
+        console.log(position)
+    }
+    function error(){
+        console.error("sorry")
+    }
+
+
+    getLocation()
+  </script>
+</head>
+<body>
+  <button onclick="getLocation()">Get Location</button>
+</body>
+</html>
